@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    container_name: pentaho-server
+    ports:
+      - "8080"
+    networks:
+      - default
+      - externo
+    restart: unless-stopped
+
+networks:
+  default:
+    driver: bridge
+  externo:
+    external: true
+    name: interdocker
