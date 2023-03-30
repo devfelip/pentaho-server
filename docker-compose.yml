@@ -5,7 +5,7 @@ services:
     build: .
     container_name: pentaho-server
     ports:
-      - "8080"
+      - "8001:8080"
     networks:
       - default
       - externo
